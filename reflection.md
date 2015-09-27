@@ -1,4 +1,4 @@
-ADD LINKKKKKKKKKKKKKKKKKK
+[my blog](https://kylefantastic.github.io/blog-template.html)
 
 **What did you learn about CSS padding, borders, and margin by doing this challenge?**
 
