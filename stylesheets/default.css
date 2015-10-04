@@ -2,13 +2,20 @@ html{
   background-color: lightblue
 }
 
+article{
+  font-family:Verdana;
+  width:50%;
+}
 a{
 
   text-decoration: none;
   color:cornsilk;
 
 }
-
+article img{
+  position:absolute;
+  clear:all;
+}
 header img{
   margin:-8px;
   width:100%;
@@ -99,7 +106,6 @@ section p{
 
 p{
   position:relative;
-  width: 36em;
   display:block;
   font-weight:bold;
   float:left;
