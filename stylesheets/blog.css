@@ -1,11 +1,26 @@
 article{
-  top:700px;
+  top:20em;
   position:relative;
   width:1000px;
   display:block;
+  clear:both;
 
 }
 
 span{
   font-size:32px;
+}
+
+pre {
+    position:relative;
+    float:left;
+    display:block;
+    font-size: 13px;
+    width: 50em;
+    padding: 20px;
+    background-color: #eee;
+    margin: 1em;
+    z-index:1;
+    top:100px;
+    left:300px;
 }
