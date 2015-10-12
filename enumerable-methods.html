@@ -41,11 +41,9 @@
 </main>
 <article>
 
-<p><span> To hash or not to hash?  Was that the question?</span></p>
+<p><span> Enumerably yours </span></p>
   <p>
-For the normals among us out there, the intricacies of programming languages like Ruby are about as
-inaccessible as ancient Egyptian.  But upon closer examination they actually have some
-straight-forward built in methods that simpify a seemingly impossible task.  One such method is map.
+The wide world of Ruby seems like an unchartable labyrinth of complicated looping spaghetti.  But upon closer examination it has some straight-forward built in methods that simpify seemingly impossible tasks.  One such method is map.
 
 Map is a method that operates on an array by iterating over each element and performing some declared code on each item.  This may seem similar to the method called each, and it is, but not identical.  Each will iterate over an array and perform the requested code while looping and when finished, it will leave the array in the same state that it found it.  With map it will perform the code and push the elements that the code requests into a temporary new array that exists only while the map process is running.  If we ask for my_array at the end, we will will see the original array, but not the temporary mapped array.  This is because Ruby automatically returns the last process in the stack, and only displays other things when requested.  It works something like this:
 </p>
