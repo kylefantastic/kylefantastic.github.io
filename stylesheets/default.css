@@ -104,6 +104,13 @@ section p{
   text-decoration:bold;
 }
 
+p img {
+float:bottom;
+position: absolute;
+
+}
+
+
 p{
   position:relative;
   display:block;
