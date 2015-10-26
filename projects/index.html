@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+   <title>kylefantastic Blog</title>
+  </head>
+
+  <body>
+
+  <header>
+    <img src ="http://img.inspiringwallpapers.net/wp-content/uploads/2014/08/mountain-reflection-on-water-majestic-nature-landscape.jpg">
+    <div><a href="#">Blog</a></div>
+    <div><a href="https://kylefantastic.github.io/blog-template.html">About Me</a></div>
+    <div><a href="#">Projects</a></div>
+    <div><a href="#">Contact</a></div>
+  </header>
+
+  <main>
+    <div></div>
+    <section>
+      <h1>The kylefantastic Blog</h1>
+      <img src="https://avatars2.githubusercontent.com/u/12705203?v=3&s=460" alt ="Profile pic" height = "250" width ="250">
+      <p>
+        Welcome weary web wanderer to the official blog of Kyle Smith,<br>
+      web developer extraordinaire.  If this is your first time visiting,<br>
+      perhaps you would like to check out the About Me section to better<br>
+      understand what I'm all about.  Otherwise let's get to the blog.<br>
+      <br>
+<br>
+<br>
+        To the right you will find the navigation to my comprehensive<br>
+      blog posts, accrued during my tenure as a Dev BootCamp student.<br>
+      It has been an arduous and edifying journey of ups, downs, and<br>
+      hard-fought victories.  You can literally witness the progress<br>
+      of the last five months before your eyes (at a much faster pace).
+      </p>
+    </section>
+</main>
+<article>
+
+
+
+<p>Ruby classes vs. JavaScript constructor functions</p><br>
+<p>
+So you need to store some repeatable information in your code and need an object to do it with?  Well you’re in luck because Ruby and JavaScript both come equipped with just such objects.  In Ruby we use classes as a container for this code and in JavaScript we use constructor functions.  Both of these objects are similar in their execution, but they have a few particular quirks that make them slightly different from each other.  A Ruby class is defined like so </p>
+<div>
+<img src="/imgs/classes.png">
+</div>
+<p>
+In this example the class is called Language, and initialized with variables for name and a creator.  Whatever the name and creator are when the class is later initialized, will be accessible throughout the method by assigning the local variables to class variables with the @ sign.  Another method called description is added to the class to print out a message about the language name and creator.  Then there are three instances of the class initialized with the new method, ruby, python, and javascript.  Finally the instance method of description is called for each instance of the Language class, which will print out the corresponding description of each language.</p><br>
+<p>
+
+This example will look awfully similar to the previous post, but it is useful to compare parts of Ruby classes to corresponding components of JavaScript constructor functions.  In JavaScript the way to define the constructor function is the first deviation in syntax from Ruby.  To define a constructor you type- function TheConstructor(parameters){ }.  This is similar to a normal JavaScript function definition, but the function name will be capitalized.  Within the curly braces code is where you will define the properties of the constructor.  Whereas in Ruby we assigned instance variables by adding an @ sign in front of the variable name, in JS we would do so by preceding the variable name with the keyword this, which is similar to the Ruby keyword self.  Also different is that JS constructor functions don’t require initialization.  Beyond that the constructor will take pretty much the same info as a Ruby class, variables, methods(functions), other objects.</p><br>
+<p>
+When the constructor is complete it is called with fairly normal JavaScript syntax for function calls- var constructor = The Constructor(“This is a parameter”).  This will save the instance of the constructor in the variable “constructor”.  One special characteristic of JS constructors is that they can also have prototypal inheritance.  This is a particularly fancy bit of Javascript functionality that allows the coder to create instances of a constructor’s method outside of the actual constructor.  This works by creating a new function with the syntax- constructor.prototype.functionName = function( ) { }.  This is a way of allowing for the constructor to not need to create a separate instance of a function every time a new instance of the constructor is created.  Finally the constructor function is invoked(or called) by creating a new instance of it with the keyword new.  From then you can call whatever function is attached to it from within the constructor or from prototypal inheritance.  It all goes together t look something like this.</p><br>
+
+
+<div>
+<img src="/imgs/constructor.png">
+</div>
+<p>
+  Here the constructor function's name is Animal and it takes two parameters, type and sound.  Function calls are the same as in Ruby.  If I wanted to make the kangaroo say its sound I would type kangaroo.makeNoise().  I could also have it speak by typing kangaroo.speak() and it would give me the speak function since it is connected to the Animal constructor by prototypal inheritance.  Just be sure to put the parentheses after the function name so it actually invokes it, that part is not the same as Ruby.
+
+<br><br><br><br><br><br></p>
+</mini>
+</p>
+</article>
+
+
+
+    <nav>
+      <ul>
+        <li><a href = "https://kylefantastic.github.io/blog/index.html">Post 1</a></li><br>
+        <li><a href = "https://kylefantastic.github.io/blog/css-concepts.html">Post 2</a></li><br>
+        <li><a href = "https://kylefantastic.github.io/blog/post-3.html">Post 3</a></li><br>
+        <li><a href = "#">Post 4</a></li><br>
+        <li><a href = "#">Post 5</a></li><br>
+        <li><a href = "#">Post 6</a></li><br>
+        <li><a href = "#">Post 7</a></li><br>
+      </ul>
+
+    </nav>
+  <footer>
+
+    <div><a href = "#">Facebook</a></div>
+    <div><a href = "#">LinkedIn</a></div>
+    <div><a href = "#">GitHub</a></div>
+    <div><a href = "#">Quora</a></div>
+    <div><a href = "#">Twitter</a></div>
+
+  </footer>
+
+  </body>
+</html>
