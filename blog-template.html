@@ -42,16 +42,26 @@
 <article>
 
 <p>
-
-So you want to create an object that takes a bunch of information and can manipulate that information in ways that you can determine on your own?  Well I think you should be using a class.  A class is a Ruby object that acts as a container for all the information you want it to hold.  This can be categorical data, methods or variables that go into the class to compose its structure.  To define a class you start with the def keyword (like a method) followed by the name of the class, the convention is to do this with the first letter capitalized.  It will also have to have the keyword end at the end so Ruby knows where the class stops.  After the method is defined there is typically a method to initialize the class, which is a special method called initialize.  Within this method you can put any arguments, define any variables, or do any other work that you want the class to have that will be unique to the class.<br><br>
-
-If you want a variable to be accessible within the rest of the class, not just in the method you create it, you will need to make it an instance variable.  All that this means is that when creating the variable, you put an @ sign before the variable name.  Then it will be accessible anywhere in the class.  You can also create methods within the class that can be called by appending them to the name of your new class instance with the dot syntax.  (see below)  These are known as instance methods because they are called when you call the instance of a class.  This is typically done by creating a new instance of a class with the name of the class followed by a dot with the instance method new.  It all goes together to look something like this.</p>
-
+  • Ruby classes vs. JavaScript constructor functions
+So you need to store some repeatable information in your code and need an object to do it with?  Well you’re in luck because Ruby and JavaScript both come equipped with just such objects.  In Ruby we use classes as a container for this code and in JavaScript we use constructor functions.  Both of these objects are similar in their execution, but they have a few particular quirks that make them slightly different from each other.  A Ruby class is defined like so </p>
 <div>
 <img src="/imgs/classes.png">
 </div>
 <p>
-  In this example the class is called Language, and initialized with variables for name and a creator.  Whatever the name and creator are when the class is later initialized, will be accessible throughout the method by assigning the local variables to class variables with the @ sign.  Another method called description is added to the class to print out a message about the language name and creator.  Then there are three instances of the class initialized with the new method, ruby, python, and javascript.  Finally the instance method of description is called for each instance of the Language class, which will print out the correpsonding description of each language.
+In this example the class is called Language, and initialized with variables for name and a creator.  Whatever the name and creator are when the class is later initialized, will be accessible throughout the method by assigning the local variables to class variables with the @ sign.  Another method called description is added to the class to print out a message about the language name and creator.  Then there are three instances of the class initialized with the new method, ruby, python, and javascript.  Finally the instance method of description is called for each instance of the Language class, which will print out the corresponding description of each language.</p><br>
+<p>
+
+This example will look awfully similar to the previous post, but it is useful to compare parts of Ruby classes to corresponding components of JavaScript constructor functions.  In JavaScript the way to define the constructor function is the first deviation in syntax from Ruby.  To define a constructor you type- function TheConstructor(parameters){ }.  This is similar to a normal JavaScript function definition, but the function name will be capitalized.  Within the curly braces code is where you will define the properties of the constructor.  Whereas in Ruby we assigned instance variables by adding an @ sign in front of the variable name, in JS we would do so by preceding the variable name with the keyword this, which is similar to the Ruby keyword self.  Also different is that JS constructor functions don’t require initialization.  Beyond that the constructor will take pretty much the same info as a Ruby class, variables, methods(functions), other objects.</p><br>
+<p>
+When the constructor is complete it is called with fairly normal JavaScript syntax for function calls- var constructor = The Constructor(“This is a parameter”).  This will save the instance of the constructor in the variable “constructor”.  One special characteristic of JS constructors is that they can also have prototypal inheritance.  This is a particularly fancy bit of Javascript functionality that allows the coder to create instances of a constructor’s method outside of the actual constructor.  This works by creating a new function with the syntax- constructor.prototype.functionName = function( ) { }.  This is a way of allowing for the constructor to not need to create a separate instance of a function every time a new instance of the constructor is created.  Finally the constructor function is invoked(or called) by creating a new instance of it with the keyword new.  From then you can call whatever function is attached to it from within the constructor or from prototypal inheritance.  It all goes together t look something like this.</p><br>
+
+
+<div>
+<img src="/imgs/constructor.png">
+</div>
+<p>
+  Here the constructor function's name is Animal and it takes two parameters, type and sound.  Function calls are the same as in Ruby.  If I wanted to make the kangaroo say its sound I would type kangaroo.makeNoise().  I could also have it speak by typing kangaroo.speak() and it would give me the speak function since it is connected to the Animal constructor by prototypal inheritance.  Just be sure to put the parentheses after the function name so it actually invokes it, that part is not the same as Ruby.
+</p>
 <br><br><br><br><br><br>
 </mini>
 </p>
