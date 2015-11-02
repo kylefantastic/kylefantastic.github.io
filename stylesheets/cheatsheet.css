@@ -1,0 +1,29 @@
+html {
+  background-color: cornflowerblue;
+  font-family: Verdana;
+}
+
+header div{
+  border-radius: 10px;
+  border: solid pink 5px;
+  background-color: cornsilk;
+  text-align: center;
+}
+h3{
+  background-color:orange;
+  width: 100px;
+  border: solid blue 2px;
+  border-radius: 3px;
+  text-align:center;
+}
+main div{
+  color: white;
+  background-color: salmon;
+  border-radius: 5px;
+  border: solid green 4px;
+  margin: 4px;
+  width:46%;
+  height:200px;
+  float:left;
+  display: inline-block;
+}
