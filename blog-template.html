@@ -40,32 +40,18 @@
     </section>
 </main>
 <article>
-
-
-
-<p>Ruby classes vs. JavaScript constructor functions</p><br>
 <p>
-So you need to store some repeatable information in your code and need an object to do it with?  Well you’re in luck because Ruby and JavaScript both come equipped with just such objects.  In Ruby we use classes as a container for this code and in JavaScript we use constructor functions.  Both of these objects are similar in their execution, but they have a few particular quirks that make them slightly different from each other.  A Ruby class is defined like so </p>
-<div>
-<img src="/imgs/classes.png">
-</div>
+Hello again folks.  Today’s topic will be an introduction to Ruby on Rails because before today I knew nothing about it and it was really bothering me.  So Ruby on Rails (aka Rails) is a framework for web applications.  This means that it can be used to develop dynamic websites, web applications, web services, and web resources.  It is what is called a model-view-controller framework meaning that the model updates the view for the user and the user uses a form of control to manipulate the model, and upon manipulating the model, the process continues.  This is known as the request/response cycle.</p><br>
+<img src="MVC-Process.svg">
 <p>
-In this example the class is called Language, and initialized with variables for name and a creator.  Whatever the name and creator are when the class is later initialized, will be accessible throughout the method by assigning the local variables to class variables with the @ sign.  Another method called description is added to the class to print out a message about the language name and creator.  Then there are three instances of the class initialized with the new method, ruby, python, and javascript.  Finally the instance method of description is called for each instance of the Language class, which will print out the corresponding description of each language.</p><br>
+Rails provides default structures for a database, a web services and web pages.  In order to create a new app with Rails you type “rails new” into your program which will generate files and folders t ouse to build the app.  The rails new command is the starting point for every Rails project.  Next to install software packages (known as gems) you type bundle install.  From there you will have many resources at your disposal to create dynamic apps, sites and other interesting things in a streamlined and user-friendly process.  Rails is designed with the intention of “Convention over Configuration” meaning there are useful shortcuts and built-in design that allows the developer to not have to repeat themselves while programming.</p><br>
 <p>
-
-This example will look awfully similar to the previous post, but it is useful to compare parts of Ruby classes to corresponding components of JavaScript constructor functions.  In JavaScript the way to define the constructor function is the first deviation in syntax from Ruby.  To define a constructor you type- function TheConstructor(parameters){ }.  This is similar to a normal JavaScript function definition, but the function name will be capitalized.  Within the curly braces code is where you will define the properties of the constructor.  Whereas in Ruby we assigned instance variables by adding an @ sign in front of the variable name, in JS we would do so by preceding the variable name with the keyword this, which is similar to the Ruby keyword self.  Also different is that JS constructor functions don’t require initialization.  Beyond that the constructor will take pretty much the same info as a Ruby class, variables, methods(functions), other objects.</p><br>
-<p>
-When the constructor is complete it is called with fairly normal JavaScript syntax for function calls- var constructor = The Constructor(“This is a parameter”).  This will save the instance of the constructor in the variable “constructor”.  One special characteristic of JS constructors is that they can also have prototypal inheritance.  This is a particularly fancy bit of Javascript functionality that allows the coder to create instances of a constructor’s method outside of the actual constructor.  This works by creating a new function with the syntax- constructor.prototype.functionName = function( ) { }.  This is a way of allowing for the constructor to not need to create a separate instance of a function every time a new instance of the constructor is created.  Finally the constructor function is invoked(or called) by creating a new instance of it with the keyword new.  From then you can call whatever function is attached to it from within the constructor or from prototypal inheritance.  It all goes together t look something like this.</p><br>
+Rails is useful for a host of web based utilities and many interactive sites use it to run.  A short list of these include  Airbnb, GitHub, Yammer, Scribd, Shopify, Hulu, and Basecamp.  As of May 2014, it is estimated that more than 600,000 web sites are running Ruby on Rails.  Learning it will be a huge complement to a developer’s toolkit and I intend to get myself caught up to speed as soon as possible.
 
 
-<div>
-<img src="/imgs/constructor.png">
-</div>
-<p>
-  Here the constructor function's name is Animal and it takes two parameters, type and sound.  Function calls are the same as in Ruby.  If I wanted to make the kangaroo say its sound I would type kangaroo.makeNoise().  I could also have it speak by typing kangaroo.speak() and it would give me the speak function since it is connected to the Animal constructor by prototypal inheritance.  Just be sure to put the parentheses after the function name so it actually invokes it, that part is not the same as Ruby.
 
-<br><br><br><br><br><br></p>
-</mini>
+<br><br><br><br><br><br>
+
 </p>
 </article>
 
